@@ -39,7 +39,7 @@ end
 function carHudLoop()
     CreateThread(function()
         while (true) do
-            local playerPed = GetPlayerPed(-1)
+            local playerPed = PlayerPedId()
             local vehicle = GetVehiclePedIsIn(playerPed)
             local IsPedInAnyVehicle = IsPedInAnyVehicle(playerPed)
             local fuelLevel  = 0
@@ -93,7 +93,7 @@ end
 
 
 RegisterCommand('seatbelt', function()
-    local playerPed = GetPlayerPed(-1)
+    local playerPed = PlayerPedId()
     local vehicle = GetVehiclePedIsIn(playerPed)
     local IsPedInAnyVehicle = IsPedInAnyVehicle(playerPed)
 
